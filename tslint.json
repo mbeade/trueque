@@ -1,0 +1,67 @@
+{
+    "class-name": true,
+    //This will ensure that all of our class names are in Pascal-case (LikeThis).
+    "comment-format": [
+        true,
+        "check-space"
+    ],
+    //Comments are required to have a space between the slashes and the comment itself (// like this).
+    "indent": [
+        true,
+        "spaces"
+    ],
+    //In the great war of tabs versus spaces, we'll take up in the spaces camp. If you're a fan of tabs, you can always change "spaces" to "tabs".
+    "no-duplicate-variable": true,
+    //This will help prevent us from redeclaring variables in the same scope.
+    "no-eval": true,
+    //This disables the use of eval.
+    "no-internal-module": true,
+    //TypeScript's module keyword has been known to cause confusion in the past, so we'll prevent its usage in favor of namespace.
+    "no-trailing-whitespace": true,
+    //This will ensure we're not leaving spaces or tabs at the end of our lines.
+    "no-var-keyword": true,
+    //ES2015 allows variables to be block-scoped by using const and let. Since TypeScript is a superset of ES2015, it also supports block-scoped variables. These new variable-declaration keywords provide clarity in our code which var does not, namely because let and const variables are not hoisted. To help achieve this clarity, this attribute tells tslint to raise a flag when it sees that we've used the var keyword.
+    "one-line": [
+        true,
+        "check-open-brace",
+        "check-whitespace"
+    ],
+    //This rule says that an opening brace must be on the same line as the statement it is for and it needs to be preceded by a space.
+    "quotemark": [
+        true,
+        "single"
+    ],
+    //This states that all strings be surrounded by single quotemarks. To use double, change "single" to "double".
+    "semicolon": true,
+    //This ensures that our lines will end with a semicolon.
+    "triple-equals": [
+        true,
+        "allow-null-check"
+    ],
+    //This tells us to use triple equals. The "allow-null-check" lets == and != for doing null-checks.
+    "typedef-whitespace": [
+        true,
+        {
+            "call-signature": "nospace",
+            "index-signature": "nospace",
+            "parameter": "nospace",
+            "property-declaration": "nospace",
+            "variable-declaration": "nospace"
+        }
+    ],
+    //These rules say that when defining types there should not be any spaces on the left side of the colon. This rule holds for return type of a function, index types, function parameters, properties, or variables.
+    "variable-name": [
+        true,
+        "ban-keywords",
+        "check-format"
+    ],
+    //We need to make sure we don't accidentally use any TypeScript keywords and that variable names are only in camelCase (likeThis) or, for constants, all uppercase (LIKE_THIS).
+    "whitespace": [
+        true,
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-separator",
+        "check-type"
+    ]
+}
